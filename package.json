@@ -1,0 +1,27 @@
+{
+  "name": "gameng",
+  "version": "1.0.0",
+  "description": "A minimalist game type thing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doctorEeevil/gameng.git"
+  },
+  "dependencies": {
+    "primus": "4.0.1"
+  },
+  "keywords": [
+    "game",
+    "threejs",
+    "websockets"
+  ],
+  "author": "Samuel Aiudi-Murphy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/doctorEeevil/gameng/issues"
+  },
+  "homepage": "https://github.com/doctorEeevil/gameng"
+}
