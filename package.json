@@ -11,7 +11,8 @@
     "url": "https://github.com/doctorEeevil/gameng.git"
   },
   "dependencies": {
-    "primus": "4.0.1"
+    "primus": "4.0.1",
+    "three": "0.73.0"
   },
   "keywords": [
     "game",
