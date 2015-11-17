@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 // http://expressjs.com/starter/static-files.html
-app.use(express.static('public'));
+app.use(express.static('public')); // serves /public/index.html
 app.use("/three", express.static('node_modules/three'));
 
 var server = require('http').createServer(app);
@@ -16,8 +16,13 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){});
 });
 
-console.log("surf to http://localhost:3000/");
-console.log("press Ctrl-C to quit :)");
 console.log();
-console.log("   love Dad");
+console.log("  surf to http://localhost:3000/");
+console.log("  press Ctrl-C to quit :)");
+console.log();
+console.log("  love Dad");
+console.log();
 server.listen(3000);
+
+
+
