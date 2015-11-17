@@ -17,4 +17,7 @@ io.on('connection', function(socket){
 });
 
 console.log("surf to http://localhost:3000/");
+console.log("press Ctrl-C to quit :)");
+console.log();
+console.log("   love Dad");
 server.listen(3000);
