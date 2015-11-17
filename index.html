@@ -16,18 +16,25 @@
       renderer.setSize( window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
 
-      var geometry = new THREE.BoxGeometry( 0.1, 0.1, 4 );
-      var material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
-      var cube = new THREE.Mesh( geometry, material );
-      scene.add( cube );
+      //var geometry = new THREE.BoxGeometry( 0.1, 0.1, 4 );
+    //  var material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+  //    var cube = new THREE.Mesh( geometry, material );
+//      scene.add( cube );
+
+      var cgeometry = new THREE.CylinderGeometry( 0.001, 1, 2, 6 );
+      var cmaterial = new THREE.MeshBasicMaterial( { color: 0x500050 } );
+//      cmaterial.color = 0x500000;
+
+      var cylinder = new THREE.Mesh( cgeometry, cmaterial );
+      scene.add( cylinder );
 
       camera.position.z = 4;
 
       var render = function () {
       requestAnimationFrame( render );
 
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+      cylinder.rotation.x += 0.01;
+      cylinder.rotation.y += 0.01;
 
       renderer.render(scene, camera);
       };
