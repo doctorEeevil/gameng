@@ -12,7 +12,9 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket){
-  socket.on('event', function(data){});
+    socket.on('newShip', function(data){
+	console.log(data);
+    });
   socket.on('disconnect', function(){});
 });
 
@@ -22,7 +24,4 @@ console.log("  press Ctrl-C to quit :)");
 console.log();
 console.log("  love Dad");
 console.log();
-server.listen(3000);
-
-
-
+server.listen(3000, "192.168.1.20");
