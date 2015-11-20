@@ -10,10 +10,20 @@ var server = require('http').createServer(app);
 
 // https://github.com/socketio/socket.io
 var io = require('socket.io')(server);
-
+var color = 0x00ff00;
+var x = 1;
+var y = 2;
+var z = 6;
 io.on('connection', function(socket){
-    socket.on('newShip', function(data){
-	console.log(data);
+    socket.on('newPlayer', function(nick){
+	color = color + 90;
+	x = x * 1.2;
+	y = y * 1.2;	
+	z = z * 1.2;
+	
+	position = [Math.round(x), Math.round(y), Math.round(z)]
+	io.emit('newShip',[nick,color,position])
+	console.log("new ship for ",nick, color, position);
     });
   socket.on('disconnect', function(){});
 });
